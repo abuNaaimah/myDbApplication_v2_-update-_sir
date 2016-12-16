@@ -13,6 +13,10 @@
 		E7CEB4761D77EA7300024ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CEB4741D77EA7300024ACB /* Main.storyboard */; };
 		E7CEB4781D77EA7300024ACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CEB4771D77EA7300024ACB /* Assets.xcassets */; };
 		E7CEB47B1D77EA7300024ACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7CEB4791D77EA7300024ACB /* LaunchScreen.storyboard */; };
+		E7CEB4841D77EB7D00024ACB /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4831D77EB7D00024ACB /* EditViewController.m */; };
+		E7CEB4861D77ECD500024ACB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CEB4851D77ECD500024ACB /* libsqlite3.0.tbd */; };
+		E7CEB4891D77ECEC00024ACB /* dbHandller.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4881D77ECEC00024ACB /* dbHandller.m */; };
+		E7CEB48B1D77ED7C00024ACB /* myContact_1.db in Resources */ = {isa = PBXBuildFile; fileRef = E7CEB48A1D77ED7C00024ACB /* myContact_1.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		E7CEB4771D77EA7300024ACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CEB47A1D77EA7300024ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7CEB47C1D77EA7300024ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7CEB4821D77EB7D00024ACB /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		E7CEB4831D77EB7D00024ACB /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		E7CEB4851D77ECD500024ACB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E7CEB4871D77ECEC00024ACB /* dbHandller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbHandller.h; sourceTree = "<group>"; };
+		E7CEB4881D77ECEC00024ACB /* dbHandller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dbHandller.m; sourceTree = "<group>"; };
+		E7CEB48A1D77ED7C00024ACB /* myContact_1.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = myContact_1.db; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CEB4861D77ECD500024ACB /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,7 @@
 		E7CEB45F1D77EA7300024ACB = {
 			isa = PBXGroup;
 			children = (
+				E7CEB4851D77ECD500024ACB /* libsqlite3.0.tbd */,
 				E7CEB46A1D77EA7300024ACB /* myDbApplication */,
 				E7CEB4691D77EA7300024ACB /* Products */,
 			);
@@ -58,6 +70,7 @@
 		E7CEB46A1D77EA7300024ACB /* myDbApplication */ = {
 			isa = PBXGroup;
 			children = (
+				E7CEB48A1D77ED7C00024ACB /* myContact_1.db */,
 				E7CEB46E1D77EA7300024ACB /* AppDelegate.h */,
 				E7CEB46F1D77EA7300024ACB /* AppDelegate.m */,
 				E7CEB4711D77EA7300024ACB /* ViewController.h */,
@@ -67,6 +80,10 @@
 				E7CEB4791D77EA7300024ACB /* LaunchScreen.storyboard */,
 				E7CEB47C1D77EA7300024ACB /* Info.plist */,
 				E7CEB46B1D77EA7300024ACB /* Supporting Files */,
+				E7CEB4821D77EB7D00024ACB /* EditViewController.h */,
+				E7CEB4831D77EB7D00024ACB /* EditViewController.m */,
+				E7CEB4871D77ECEC00024ACB /* dbHandller.h */,
+				E7CEB4881D77ECEC00024ACB /* dbHandller.m */,
 			);
 			path = myDbApplication;
 			sourceTree = "<group>";
@@ -136,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CEB48B1D77ED7C00024ACB /* myContact_1.db in Resources */,
 				E7CEB47B1D77EA7300024ACB /* LaunchScreen.storyboard in Resources */,
 				E7CEB4781D77EA7300024ACB /* Assets.xcassets in Resources */,
 				E7CEB4761D77EA7300024ACB /* Main.storyboard in Resources */,
@@ -149,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CEB4841D77EB7D00024ACB /* EditViewController.m in Sources */,
 				E7CEB4731D77EA7300024ACB /* ViewController.m in Sources */,
+				E7CEB4891D77ECEC00024ACB /* dbHandller.m in Sources */,
 				E7CEB4701D77EA7300024ACB /* AppDelegate.m in Sources */,
 				E7CEB46D1D77EA7300024ACB /* main.m in Sources */,
 			);

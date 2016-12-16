@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EditViewController.h
 //  myDbApplication
 //
 //  Created by tops on 9/1/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
-
+@interface EditViewController : UIViewController
+@property int infoid;
 @end
-

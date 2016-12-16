@@ -15,8 +15,36 @@
 @implementation AppDelegate
 
 
+-(void) copyDbToApp
+{
+    NSArray * arrDirSources = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *strPath = [arrDirSources objectAtIndex:0];
+    
+    self.strDbSource = [strPath stringByAppendingPathComponent:@"myContact_1.db"];
+    NSLog(@"Path for db is : \n%@",self.strDbSource);
+    if(![[NSFileManager defaultManager] fileExistsAtPath:self.strDbSource])
+    {
+        NSString * originalPath = [[NSBundle mainBundle] pathForResource:@"myContact_1" ofType:@"db"];
+        
+       BOOL isDone = [[NSFileManager defaultManager]copyItemAtPath:originalPath  toPath:self.strDbSource error:nil];
+        NSLog(@"in if condition : %@",self.strDbSource);
+        
+        if(isDone)
+        {
+            NSLog(@"file copy done!");
+        }
+        else{
+            NSLog(@"File copy not done!");
+        }
+    }
+    
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self copyDbToApp];
     return YES;
 }
 
